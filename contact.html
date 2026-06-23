@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,144 +9,204 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .success-message{
-            display:none;
-            background:#e8fff0;
-            color:#0a7a32;
-            border:1px solid #0a7a32;
-            padding:15px;
-            margin-top:20px;
-            border-radius:8px;
-            font-weight:600;
-            text-align:center;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f6fa;
+            color: #0b1b2b;
         }
 
-        .error-message{
-            display:none;
-            background:#ffeaea;
-            color:#c62828;
-            border:1px solid #c62828;
-            padding:15px;
-            margin-top:20px;
-            border-radius:8px;
-            font-weight:600;
-            text-align:center;
+        .contact-section {
+            padding: 40px 20px;
         }
 
-        form label{
-            display:block;
-            margin-bottom:15px;
+        .contact-title {
+            text-align: center;
+            color: #003b70;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            max-width: 1100px;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 35px 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box h3 {
+            color: #ff5a00;
+            margin-bottom: 20px;
+        }
+
+        .info p {
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .info strong {
+            color: #0b1b2b;
         }
 
         form input,
-        form textarea{
-            width:100%;
-            padding:12px;
-            margin-top:5px;
-            border:1px solid #ccc;
-            border-radius:6px;
-            box-sizing:border-box;
+        form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 13px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+            box-sizing: border-box;
         }
 
-        form button{
-            background:#0d6efd;
-            color:white;
-            border:none;
-            padding:12px 25px;
-            border-radius:6px;
-            cursor:pointer;
-            font-size:16px;
+        form textarea {
+            height: 120px;
+            resize: vertical;
         }
 
-        form button:hover{
-            opacity:0.9;
+        form button {
+            width: 100%;
+            padding: 14px;
+            background: #ff5a00;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #e64f00;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 15px;
+            padding: 14px;
+            background: #e9fff0;
+            color: #06752f;
+            border: 1px solid #06752f;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .error-message {
+            display: none;
+            margin-top: 15px;
+            padding: 14px;
+            background: #ffecec;
+            color: #c62828;
+            border: 1px solid #c62828;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .map-box {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 330px;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-title {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header class="top-header">
-    <div class="container nav">
-        <h1 class="logo">Vedant Global Impex</h1>
+<section class="contact-section">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html" class="nav-btn">Contact</a>
-        </nav>
-    </div>
-</header>
+    <h2 class="contact-title">Contact Us</h2>
 
-<section class="gray">
-    <div class="container">
+    <div class="contact-box">
 
-        <h2>Contact Us</h2>
+        <div class="info">
+            <h3>Get in Touch</h3>
 
-        <form id="contact-form"
-              action="https://formspree.io/f/mgoaykqw"
-              method="POST">
+            <p>📍 <strong>Address:</strong> Shree Ganesh Plaza II, Sector 1, Khanda Colony,<br>
+                Panvel, Maharashtra</p>
 
-            <label>
-                Your Name:
-                <input type="text" name="Name" required>
-            </label>
+            <p>📞 <strong>Phone:</strong> +91 8779584200</p>
 
-            <label>
-                Your Email:
-                <input type="email" name="email" required>
-            </label>
+            <p>📧 <strong>Email:</strong> info@vedantglobalimpex.com</p>
 
-            <label>
-                Your Contact:
-                <input type="tel" name="contact_number" required>
-            </label>
-
-            <label>
-                Your Requirement:
-                <textarea name="message" rows="5" required></textarea>
-            </label>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div id="success-message" class="success-message">
-            ✅ Details Submitted Successfully!<br>
-            Thank you for contacting Vedant Global Impex.
-            We will get back to you shortly.
+            <p>⏱️ <strong>Hours:</strong> Monday - Saturday: 10:00 AM – 7:00 PM</p>
         </div>
 
-        <div id="error-message" class="error-message">
-            ❌ Something went wrong. Please try again.
+        <div class="form-area">
+            <h3>Send Us a Message</h3>
+
+            <form id="contact-form" action="https://formspree.io/f/mgoaykqw" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="success-message" class="success-message">
+                ✅ Details submitted successfully!
+            </div>
+
+            <div id="error-message" class="error-message">
+                ❌ Something went wrong. Please try again.
+            </div>
         </div>
 
-        <p class="contact-info">
-            📧 Email: info@vedantglobalimpex.com <br>
-            📞 Phone: +91 8779584200
-        </p>
-
     </div>
+
+    <div class="map-box">
+        <iframe
+            src="https://www.google.com/maps?q=Shree%20Ganesh%20Plaza%20II%20Sector%201%20Khanda%20Colony%20Panvel%20Maharashtra&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
 </section>
-
-<footer>
-    <p>© 2026 Vedant Global Impex. All Rights Reserved.</p>
-</footer>
-
-<a href="https://wa.me/918779584200" class="whatsapp-float">💬</a>
 
 <script>
 const form = document.getElementById("contact-form");
+const successMessage = document.getElementById("success-message");
+const errorMessage = document.getElementById("error-message");
 
 form.addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const data = new FormData(form);
+    const formData = new FormData(form);
 
     try {
         const response = await fetch(form.action, {
             method: "POST",
-            body: data,
+            body: formData,
             headers: {
                 "Accept": "application/json"
             }
@@ -153,19 +214,15 @@ form.addEventListener("submit", async function(e) {
 
         if (response.ok) {
             form.reset();
-
-            document.getElementById("success-message").style.display = "block";
-            document.getElementById("error-message").style.display = "none";
-
-            window.scrollTo({
-                top: document.getElementById("success-message").offsetTop - 100,
-                behavior: "smooth"
-            });
+            successMessage.style.display = "block";
+            errorMessage.style.display = "none";
         } else {
-            document.getElementById("error-message").style.display = "block";
+            successMessage.style.display = "none";
+            errorMessage.style.display = "block";
         }
     } catch (error) {
-        document.getElementById("error-message").style.display = "block";
+        successMessage.style.display = "none";
+        errorMessage.style.display = "block";
     }
 });
 </script>
