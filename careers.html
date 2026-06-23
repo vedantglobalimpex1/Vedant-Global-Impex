@@ -102,29 +102,31 @@
             Don't see a position that perfectly fits your profile? Send us an open application, and we will get in touch if a matching vacancy opens up.
         </p>
 
-        <form action="https://formspree.io/f/mdarkdpo" method="POST" enctype="multipart/form-data">
-            <input type="text" placeholder="Your Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="tel" placeholder="Phone Number" required>
-            
-            <div style="margin-bottom: 15px; text-align: left;">
-                <label style="font-size: 14px; color: #0B2C3D; display: block; margin-bottom: 5px;"><strong>Position of Interest:</strong></label>
-                <select style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit;" required>
-                    <option value="" disabled selected>Select a position...</option>
-                    <option value="logistics">Logistics Operations Executive</option>
-                    <option value="documentation">Export-Import Documentation Coordinator</option>
-                    <option value="general">Other / General Application</option>
-                </select>
-            </div>
+       <form action="https://formspree.io/f/mdarkdpo" method="POST" enctype="multipart/form-data">
+    
+    <input type="text" name="applicant_name" placeholder="Your Full Name" required>
+    <input type="email" name="applicant_email" placeholder="Email Address" required>
+    <input type="tel" name="applicant_phone" placeholder="Phone Number" required>
+    
+    <div style="margin-bottom: 15px; text-align: left;">
+        <label style="font-size: 14px; color: #0B2C3D; display: block; margin-bottom: 5px;"><strong>Position of Interest:</strong></label>
+        <select name="position_applied" style="width: 100%; padding: 12px; border-radius: 4px; border: 1px solid #ccc; font-family: inherit;" required>
+            <option value="" disabled selected>Select a position...</option>
+            <option value="Logistics Executive">Logistics Operations Executive</option>
+            <option value="Documentation Coordinator">Export-Import Documentation Coordinator</option>
+            <option value="General Application">Other / General Application</option>
+        </select>
+    </div>
 
-            <div style="margin-bottom: 15px; text-align: left;">
-                <label style="font-size: 14px; color: #0B2C3D; display: block; margin-bottom: 5px;"><strong>Upload Resume (PDF/Doc):</strong></label>
-                <input type="file" accept=".pdf,.doc,.docx" style="padding: 8px;" required>
-            </div>
+    <div style="margin-bottom: 15px; text-align: left;">
+        <label style="font-size: 14px; color: #0B2C3D; display: block; margin-bottom: 5px;"><strong>Upload Resume (PDF/Doc):</strong></label>
+        <input type="file" name="resume_file" accept=".pdf,.doc,.docx" style="padding: 8px;" required>
+    </div>
 
-            <textarea placeholder="Tell us briefly about your experience in global trade & logistics..."></textarea>
-            <button type="submit">Submit Application</button>
-        </form>
+    <textarea name="experience_notes" placeholder="Tell us briefly about your experience in global trade & logistics..."></textarea>
+    
+    <button type="submit">Submit Application</button>
+    </form>
     </div>
 </section>
 
