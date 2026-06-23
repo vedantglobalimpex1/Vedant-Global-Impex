@@ -392,3 +392,119 @@ footer {
         padding: 25px;
     }
 }
+
+/* ================= CONTACT PAGE FIX ================= */
+
+.contact-page {
+    background: #F4F7FA;
+    padding: 70px 0;
+}
+
+.contact-wrapper {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: flex-start;
+}
+
+.contact-left h3,
+.contact-right h3 {
+    color: #1AA6A6;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-left p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #243238;
+}
+
+.contact-left strong {
+    color: #0B2C3D;
+}
+
+/* IMPORTANT FIX */
+.contact-right form {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.contact-right textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-right button {
+    width: 100%;
+    background: #1AA6A6;
+    color: #ffffff;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-right button:hover {
+    background: #148C8C;
+}
+
+.success-message,
+.error-message {
+    display: none;
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    background: #e9fff0;
+    color: #06752f;
+    border: 1px solid #06752f;
+}
+
+.error-message {
+    background: #ffecec;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.map-box {
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 330px;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 30px;
+    }
+}
